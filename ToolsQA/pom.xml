@@ -65,7 +65,7 @@
 					<version>2.22.1</version>
 					<executions>
 						<execution>
-						<id>default-test</id>
+						<id>start</id>
 						<phase>test</phase>
 						<goals>
 							<goal>test</goal>
