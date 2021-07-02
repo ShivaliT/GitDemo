@@ -76,6 +76,9 @@
 							</goals>
 						</execution>
 					</executions>
+					<configuration>
+						<suiteXmlFiles>${suiteXmlFiles}</suiteXmlFiles>
+					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-jar-plugin</artifactId>
