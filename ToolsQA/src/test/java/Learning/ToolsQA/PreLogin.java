@@ -1,10 +1,12 @@
 package Learning.ToolsQA;
 
+import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.testng.annotations.Test;
+import PageObjects.HomePage;
+import PageObjects.LoginPage;
 
 
 
@@ -15,17 +17,8 @@ public class PreLogin extends Base {
 	public void validateTitle() throws IOException
 	{
 		try {
-			System.out.println(System.getProperty("user.dir"));
-			Properties prop = new Properties();
-
-			FileInputStream fis = new FileInputStream("/Users/VSBist/eclipse-workspace/GitStuff/GitDemo/ToolsQA/data.properties");
-
-			prop.load(fis);
-
-			String URL = prop.getProperty("URL");
-			String browsername = prop.getProperty("browser");
-			System.out.println(browsername);	
-
+			//System.out.println(System.getProperty("user.dir"));
+			loadPropFile();	
 			driver = initialiseDriver(browsername);
 			Openurl(URL);
 
@@ -37,6 +30,56 @@ public class PreLogin extends Base {
 		}finally {
 			closeBrowser();
 		}	
+	}
+	
+	
+	@Test
+	public void IsSignInButtonClicable() throws InterruptedException, IOException {
+		loadPropFile();	
+		driver = initialiseDriver(browsername);
+		Openurl(URL);
+		
+		try {
+			HomePage l =new HomePage(driver);
+			
+			l.performMouseHoverOverAccountLabel();
+			l.clickSignIn();
+		}catch (Exception e) {
+			// Logger statement
+		}finally {
+			closeBrowser();
+		}
+	}
+
+	@Test 
+	public void VerifyLoginUsingValidCredentials() throws IOException, InterruptedException {
+		// launch browser
+		// URL
+		// Hover over Account
+		// Click on signin
+		loadPropFile();	
+		driver = initialiseDriver(browsername);
+		Openurl(URL);
+		HomePage l =new HomePage(driver);
+		
+		try {
+			l.performMouseHoverOverAccountLabel();
+			
+		}catch (Exception e) {
+			// Logger statement
+		}
+
+	
+		try {
+			// Validate dasboard
+			
+		}catch (Exception e) {
+			// Logger statement
+		}finally {
+			closeBrowser();
+		}
+
+
 	}
 
 }
