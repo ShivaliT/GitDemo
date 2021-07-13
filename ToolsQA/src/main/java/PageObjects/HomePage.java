@@ -13,7 +13,7 @@ import Learning.ToolsQA.Base;
 public class HomePage extends Base{
 
 
-	By AccountLabel= By.id("nav-link-accountList-nav-line-1");
+	By AccountLabel = By.id("nav-link-accountList-nav-line-1");
 	By Signin = By.cssSelector("span[class='nav-action-inner']");
 	
 
