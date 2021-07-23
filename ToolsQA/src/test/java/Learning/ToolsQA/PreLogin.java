@@ -44,6 +44,7 @@ public class PreLogin extends Base {
 			
 			l.performMouseHoverOverAccountLabel();
 			l.clickSignIn();
+			//l.performSelection();
 		}catch (Exception e) {
 			// Logger statement
 		}finally {
@@ -78,7 +79,64 @@ public class PreLogin extends Base {
 		}finally {
 			closeBrowser();
 		}
+	}
+		@Test 
+		public void VerifySelection() throws IOException, InterruptedException {
+			// launch browser
+			// URL
+			// Hover over Account
+			// Click on signin
+			loadPropFile();	
+			driver = initialiseDriver(browsername);
+			Openurl(URL);
+			HomePage l =new HomePage(driver);
+			
+			try {
+				l.performSelection();
+				
+			}catch (Exception e) {
+				// Logger statement
+			}
 
+		
+			try {
+				// Validate dasboard
+				
+			}catch (Exception e) {
+				// Logger statement
+			}finally {
+				closeBrowser();
+			}
+
+	}
+		@Test
+		
+		public void VerifySelectioncount() throws IOException, InterruptedException {
+			// launch browser
+			// URL
+			// Hover over Account
+			// Click on signin
+			loadPropFile();	
+			driver = initialiseDriver(browsername);
+			Openurl(URL);
+			HomePage l =new HomePage(driver);
+			
+			try {
+				l.findSize();
+				
+			}catch (Exception e) {
+				// Logger statement
+			}
+
+		
+			try {
+				// Validate dasboard
+				
+			}catch (Exception e) {
+				// Logger statement
+			}finally {
+				closeBrowser();
+			}
 
 	}
 

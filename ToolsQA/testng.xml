@@ -5,6 +5,7 @@
     <classes>
       <class name="Learning.ToolsQA.PreLogin"/>
       <class name="Learning.ToolsQA.Loginuser"/>
+         <class name="Learning.ToolsQA.Successfulsearch"/>
     </classes>
    
   </test> <!-- Test -->

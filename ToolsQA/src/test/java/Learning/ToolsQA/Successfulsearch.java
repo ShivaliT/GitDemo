@@ -22,6 +22,7 @@ public class Successfulsearch extends Base{
 			Thread.sleep(2000);
 			SearchBox searchbox = new SearchBox();
 			searchbox.search();
+			searchbox.searchcount();
 			// the search result is a different page
 		
 			

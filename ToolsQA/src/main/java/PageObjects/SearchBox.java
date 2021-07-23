@@ -31,11 +31,11 @@ By Resultsa = By.xpath("//div[contains(@data-asin,'B0')]");
 		WebElement go =driver.findElement(goButton);
 		go.click();
 		System.out.println("hi");
-
+	}
 	//	Thread.sleep(5000);
 //	}
 
-	//public void searchcount()  throws InterruptedException {
+	public void searchcount()  throws InterruptedException {
 
 
 		List<WebElement> items =driver.findElements(Resultsa);
